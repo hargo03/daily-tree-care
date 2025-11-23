@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Daily Tree Care</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-layer">
+            <div id="hud-top">
+                <div class="stat-box">
+                    <span>Age: </span><span id="tree-age">0</span><span> days</span>
+                </div>
+                <div style="display: flex; gap: 5px;">
+                    <button id="debug-skip-btn"
+                        style="pointer-events: auto; padding: 5px; font-family: inherit; cursor: pointer;">+1
+                        Day</button>
+                    <button id="debug-jump-btn"
+                        style="pointer-events: auto; padding: 5px; font-family: inherit; cursor: pointer;">+2
+                        Years</button>
+                    <button id="debug-reset-btn"
+                        style="pointer-events: auto; padding: 5px; font-family: inherit; cursor: pointer; background: #ff4444;">Reset</button>
+                    <button id="plant-seed-btn"
+                        style="pointer-events: auto; padding: 5px; font-family: inherit; cursor: pointer; background: #4CAF50;">Plant
+                        Seed</button>
+                </div>
+                <div class="stat-box">
+                    <span>Water: </span><span id="water-level">100</span>%
+                </div>
+            </div>
+            <div id="hud-bottom">
+                <button class="tool-btn active" data-tool="water" title="Water Can">💧</button>
+                <button class="tool-btn" data-tool="trim" title="Shears">✂️</button>
+                <button class="tool-btn" data-tool="shield" title="Shield">🛡️</button>
+            </div>
+            <div id="message-area"></div>
+        </div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>
